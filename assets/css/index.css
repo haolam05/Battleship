@@ -1,0 +1,48 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.3em;
+}
+
+#board {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  width: 508px;
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+#gameOverMsg {
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+#reset-btn {
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 5px 20px;
+}
+
+#reset-btn:hover {
+  border-color: white;
+  background-color: brown;
+  color: white;
+}
