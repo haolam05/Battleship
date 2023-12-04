@@ -78,7 +78,7 @@ export default function initializeEvents(humanPlayer, computerPlayer, currentSta
           resetBtnEl.classList.remove('hidden');
           currentState = 'playing';
           console.log(humanPlayer.board.grid);
-          _resetBoard(humanPlayer, ' ');
+          _resetBoard(humanPlayer, ' ', false);
         }
       }
     }
@@ -167,12 +167,13 @@ export default function initializeEvents(humanPlayer, computerPlayer, currentSta
     }
   }
 
-  function _resetBoard(player, separator) {
+  function _resetBoard(player, separator, border = true) {
     for (let i = 0; i < player.board.grid.length; i++) {
       for (let j = 0; j < player.board.grid[0].length; j++) {
         const square = document.getElementById(`${i}${separator}${j}`);
         square.style.backgroundColor = '';
         square.innerText = '';
+        if (border) square.style.borderColor = 'black';
       }
     }
   }
