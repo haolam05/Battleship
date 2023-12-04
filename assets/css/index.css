@@ -8,11 +8,24 @@ h1 {
   font-size: 2.3em;
 }
 
-#board {
+#board-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+}
+
+#user-board,
+#computer-board {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
   width: 508px;
+}
+
+h2 {
+  text-transform: capitalize;
+  margin: 10px auto;
+  color: orangered;
 }
 
 .square {
@@ -35,14 +48,50 @@ h1 {
   display: none;
 }
 
-#reset-btn {
+#reset-btn,
+#setup-btn {
   border-radius: 5px;
   margin-bottom: 10px;
   padding: 5px 20px;
+  background-color: transparent;
+  border-color: brown;
 }
 
-#reset-btn:hover {
+#reset-btn:hover,
+#setup-btn:hover {
   border-color: white;
   background-color: brown;
   color: white;
+}
+
+.square:hover {
+  border-radius: 25px;
+}
+
+#ships-container {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1056px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.container:hover {
+  background-color: brown;
+}
+
+.hidden {
+  display: none;
+}
+
+.container[data-direction="col"]:hover {
+  flex-direction: column;
 }
