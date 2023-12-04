@@ -89,12 +89,16 @@ export default function initializeEvents(humanPlayer, computerPlayer, currentSta
   function _placeShip(row, col, direction, shipLength) {
     if (direction == 'col') {
       for (let i = row; i < row + shipLength; i++) {
-        document.getElementById(`${i} ${col}`).innerText = '⛴️';
+        const sq = document.getElementById(`${i} ${col}`);
+        sq.innerText = '⛴️';
+        sq.style.borderColor = 'orangered';
         humanPlayer.board.grid[i][col] = shipLength;
       }
     } else if (direction == 'row') {
       for (let j = col; j < col + shipLength; j++) {
-        document.getElementById(`${row} ${j}`).innerText = '⛴️';
+        const sq = document.getElementById(`${row} ${j}`);
+        sq.innerText = '⛴️';
+        sq.style.borderColor = 'orangered';
         humanPlayer.board.grid[row][j] = shipLength;
       }
     }
