@@ -1,5 +1,9 @@
 # Battleship
 
+  - Developed a front-end application for the classic game of Battleship, demonstrating proficiency in Javascript and DOM manipulations.
+  - Designed and implemented an intuitive user interface that enhances smooth gaming experience.
+
+
 ### Hosted On
 [![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?logo=netlify&logoColor=#00C7B7)](https://battleship.haolam.codes/)
 
